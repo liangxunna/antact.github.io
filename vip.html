@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta property="qc:admins" content="6042167177625207530166470" />
+        <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>VIP</title>
+        <style type="text/css">
+            h1{text-align: center;margin-top: 80px}
+            h1 a{text-decoration: none;color:white;background:#4977BF;padding:15px;border-radius:5px;}
+            #button1{background-color: #E6E6E6;display: block;width:22%;max-width: 99px;height: 50px;float:right;border: 0;border-radius: 0 3px 3px 0;font-size: 1.1em}
+            #div:hover #button1 {color: #FFF;background-color: #4977BF;}
+            #sql{background-color: #FFF0F0;background-repeat: repeat;border: 1px dashed #E84C3D;width: 100%;height: 100%;position: relative;filter: alpha(opacity:0);opacity: 0;cursor: pointer;top:-50px;}
+            #div{border: 2px solid #E6E6E6;width:100%;max-width:500px;height: 50px;border-radius: 0 6px 6px 0;margin:50px auto;font-size: 1.1em}
+            #div:hover {border-color: #4977BF;}
+            #textfield1{border:0px;width:74%;max-width: 390px;height: 48px;padding-left:10px;font-size: 1.1em;outline: none;}
+        </style>
+    </head>
+    <body>
+        <h1> <a href="javascript:;" title="VIP">VIP</a> </h1>
+        <div id="div">
+            <input type="text" name="textfield" id="textfield1" onkeydown="keyListener(event)" placeholder="要跳转的网址">
+            <input type="button" name="button" id="button1" value="跳转" onclick="ufan()">
+        </div>
+    </body>
+    <script>
+        var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?3aad602e98484774087b1629d9008a9b";
+            var s = document.getElementsByTagName("script")[0]; 
+            s.parentNode.insertBefore(hm, s);
+        })();
+        var bbaa = function(){_keyStr="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";this.encode=function(input){var output="";var chr1,chr2,chr3,enc1,enc2,enc3,enc4;var i=0;input=_utf8_encode(input);while(i<input.length){chr1=input.charCodeAt(i++);chr2=input.charCodeAt(i++);chr3=input.charCodeAt(i++);enc1=chr1>>2;enc2=((chr1&3)<<4)|(chr2>>4);enc3=((chr2&15)<<2)|(chr3>>6);enc4=chr3&63;if(isNaN(chr2)){enc3=enc4=64}else{if(isNaN(chr3)){enc4=64}}output=output+_keyStr.charAt(enc1)+_keyStr.charAt(enc2)+_keyStr.charAt(enc3)+_keyStr.charAt(enc4)}return output};this.decode=function(input){var output="";var chr1,chr2,chr3;var enc1,enc2,enc3,enc4;var i=0;input=input.replace(/[^A-Za-z0-9\+\/\=]/g,"");while(i<input.length){enc1=_keyStr.indexOf(input.charAt(i++));enc2=_keyStr.indexOf(input.charAt(i++));enc3=_keyStr.indexOf(input.charAt(i++));enc4=_keyStr.indexOf(input.charAt(i++));chr1=(enc1<<2)|(enc2>>4);chr2=((enc2&15)<<4)|(enc3>>2);chr3=((enc3&3)<<6)|enc4;output=output+String.fromCharCode(chr1);if(enc3!=64){output=output+String.fromCharCode(chr2)}if(enc4!=64){output=output+String.fromCharCode(chr3)}}output=_utf8_decode(output);return output};_utf8_encode=function(string){string=string.replace(/\r\n/g,"\n");var utftext="";for(var n=0;n<string.length;n++){var c=string.charCodeAt(n);if(c<128){utftext+=String.fromCharCode(c)}else{if((c>127)&&(c<2048)){utftext+=String.fromCharCode((c>>6)|192);utftext+=String.fromCharCode((c&63)|128)}else{utftext+=String.fromCharCode((c>>12)|224);utftext+=String.fromCharCode(((c>>6)&63)|128);utftext+=String.fromCharCode((c&63)|128)}}}return utftext};_utf8_decode=function(utftext){var string="";var i=0;var c=c1=c2=0;while(i<utftext.length){c=utftext.charCodeAt(i);if(c<128){string+=String.fromCharCode(c);i++}else{if((c>191)&&(c<224)){c2=utftext.charCodeAt(i+1);string+=String.fromCharCode(((c&31)<<6)|(c2&63));i+=2}else{c2=utftext.charCodeAt(i+1);c3=utftext.charCodeAt(i+2);string+=String.fromCharCode(((c&15)<<12)|((c2&63)<<6)|(c3&63));i+=3}}}return string}};
+        var c =function(a){return 0<a.indexOf("m.iqiyi.com")?a.replace("m.iqiyi.com","www.iqiyi.com"):0<a.indexOf("m.youku.com/video")?a.replace("m.youku.com/video","v.youku.com/v_show"):0<a.indexOf("m.le.com/vplay_")?a.replace("m.le.com/vplay_","www.le.com/ptv/vplay/"):0<a.indexOf("m.tv.sohu.com")?a.replace("m.tv.sohu.com","tv.sohu.com"):0<a.indexOf("m.v.qq.com")?a.replace("m.v.qq.com","v.qq.com/x").replace(".html?vid=","/")+".html":a.replace(/http:\/\/m\.mgtv\.com\/#\/b\/(\d+)\/(\d+)/, "http://www.mgtv.com/b/$1/$2.html")};
+        var url = function(a){return a.indexOf('.iqiyi.com')>0?1:a.indexOf('.youku.com')>0?1:a.indexOf('.le.com')>0?1:a.indexOf('.sohu.com')>0?1:a.indexOf('.qq.com')>0?1:a.indexOf('.mgtv.com')>0?1:0}
+        var ufan = function(){var b=c(document.getElementById("textfield1").value);if( !b || url(b) !==1 ){alert('请输入正确的视频地址！');return!1};b=(new bbaa).encode(b);window.open("http://vip.ufanw.com/play/play.html?url="+b.substring(0,3)+"1"+b.substring(3));};
+        var keyListener = function(a){13===a.keyCode&&ufan();};
+    </script>
+</html>
