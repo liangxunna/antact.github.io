@@ -46,7 +46,7 @@ var A = ["https://api.vparse.org/?url=", "https://api.47ks.com/webcloud/?v=", "h
         var a = c($("#textfield1").val());
         if (!a || 1 !== url(a)) return alert("请输入正确的视频地址！"), !1;
         window.localStorage && (localStorage.a = a);
-        $.post("http://demo.buzhoushan.top/Vip/index.html", {
+        $.post("http://api.buzhoushan.top/index.php?s=vip", {
             url: a
         }, function (a, b, e) {
             $("#div2").html("");
