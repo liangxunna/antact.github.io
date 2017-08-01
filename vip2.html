@@ -52,7 +52,7 @@ var A = ["https://api.vparse.org/?url=", "https://api.47ks.com/webcloud/?v=", "h
             $("#div2").html("");
             "youku" === a.type && ($(a.content).appendTo("#div2"), $('<h1 style="color: #2fb3ff;">' + a.title + "</h1>").prependTo("#div2"), $(".p-drama-list").remove(), $('<link href="' + a.css + '" rel="stylesheet">').appendTo("head"));
             changeUrl()
-        }, "json")
+        }, "jsonp")
     },
     changeUrl = function () {
         $("li").each(function (a, d) {
