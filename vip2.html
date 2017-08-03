@@ -49,9 +49,10 @@ var A = ["https://api.vparse.org/?url=", "https://api.47ks.com/webcloud/?v=", "h
         window.localStorage && (localStorage.a = a);
         $.post('//api.buzhoushan.top/index.php?s=vip', {url: a}, function(data, textStatus, xhr) {
             $("#div2").html("");
+            console.log(data);
             "youku" === data.type && ($(data.content).appendTo("#div2"), $('<h1 style="color: #2fb3ff;">' + data.title + "</h1>").prependTo("#div2"), $(".p-drama-list").remove(), $('<link href="' + data.css + '" rel="stylesheet">').appendTo("head"));
             changeUrl();
-        });
+        },'json');
     },
     changeUrl = function () {
         $("li").each(function (a, d) {
