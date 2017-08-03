@@ -47,22 +47,10 @@ var A = ["https://api.vparse.org/?url=", "https://api.47ks.com/webcloud/?v=", "h
         var a = c($("#textfield1").val());
         if (!a || 1 !== url(a)) return alert("请输入正确的视频地址！"), !1;
         window.localStorage && (localStorage.a = a);
-        $.ajax({
-            url: '//api.buzhoushan.top/index.php?s=vip',
-            type: 'POST',
-            dataType: 'json',
-            data: {url: a},
-        })
-        .done(function() {
+        $.post('//api.buzhoushan.top/index.php?s=vip', {url: a}, function(data, textStatus, xhr) {
             $("#div2").html("");
-            "youku" === a.type && ($(a.content).appendTo("#div2"), $('<h1 style="color: #2fb3ff;">' + a.title + "</h1>").prependTo("#div2"), $(".p-drama-list").remove(), $('<link href="' + a.css + '" rel="stylesheet">').appendTo("head"));
-            changeUrl()
-        })
-        .fail(function() {
-            console.log("error");
-        })
-        .always(function() {
-            console.log("complete");
+            "youku" === data.type && ($(data.content).appendTo("#div2"), $('<h1 style="color: #2fb3ff;">' + data.title + "</h1>").prependTo("#div2"), $(".p-drama-list").remove(), $('<link href="' + data.css + '" rel="stylesheet">').appendTo("head"));
+            changeUrl();
         });
     },
     changeUrl = function () {
