@@ -28,7 +28,7 @@
         </div>
         <div id="div2"></div>
     </body>
-    <script src="//asset.buzhoushan.top/js/jquery-v1.11.1.js"></script>
+    <script src="https://asset.buzhoushan.top/js/jquery-v1.11.1.js"></script>
     <script type="text/javascript">
         var _hmt = _hmt || [];
         (function() {var hm = document.createElement("script");hm.src = "https://hm.baidu.com/hm.js?3aad602e98484774087b1629d9008a9b";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm, s);
@@ -42,7 +42,7 @@
             }
         })(jQuery);
        var A=["https://api.vparse.org/?url=","https://api.47ks.com/webcloud/?v=","https://api.vparse.org/?url=","http://api.nepian.com/ckparse/?url=","http://player.jidiaose.com/supapi/iframe.php?v="],L=$.getUrlParam("l")?$.getUrlParam("l"):-1<$.inArray(navigator.platform.toLocaleLowerCase(),["iphone","ios"])?4:0,getUrl=function(){var a=c($("#textfield1").val());if(!a||1!==url(a))return alert("\u8bf7\u8f93\u5165\u6b63\u786e\u7684\u89c6\u9891\u5730\u5740\uff01"),!1;window.localStorage&&(localStorage.a=a);
-        $.post("//api.buzhoushan.top/index.php?s=vip",{url:a},function(a,d,e){$("#div2").html("");"youku"===a.type&&($(a.content).appendTo("#div2"),$('<h1 style="color: #2fb3ff;">'+a.title+"</h1>").prependTo("#div2"),$(".p-drama-list").remove(),$('<link href="'+a.css+'" rel="stylesheet">').appendTo("head"));changeUrl()},"json")},changeUrl=function(){$("li").each(function(a,b){a=A[L]+("http://"+$(this).find("a").attr("href").replace()).replace("////","//").replace("http://http://","http://");$(this).find("a").attr("href",
+        $.post("https://api.buzhoushan.top/index.php?s=vip",{url:a},function(a,d,e){$("#div2").html("");"youku"===a.type&&($(a.content).appendTo("#div2"),$('<h1 style="color: #2fb3ff;">'+a.title+"</h1>").prependTo("#div2"),$(".p-drama-list").remove(),$('<link href="'+a.css+'" rel="stylesheet">').appendTo("head"));changeUrl()},"json")},changeUrl=function(){$("li").each(function(a,b){a=A[L]+("http://"+$(this).find("a").attr("href").replace()).replace("////","//").replace("http://http://","http://");$(this).find("a").attr("href",
         a)})},c=function(a){return 0<a.indexOf("m.iqiyi.com")?a.replace("m.iqiyi.com","www.iqiyi.com"):0<a.indexOf("m.youku.com/video")?a.replace("m.youku.com/video","v.youku.com/v_show"):0<a.indexOf("m.le.com/vplay_")?a.replace("m.le.com/vplay_","www.le.com/ptv/vplay/"):0<a.indexOf("m.tv.sohu.com")?a.replace("m.tv.sohu.com","tv.sohu.com"):0<a.indexOf("m.v.qq.com")?a.replace("m.v.qq.com","v.qq.com/x").replace(".html?vid=","/")+".html":a.replace(/http:\/\/m\.mgtv\.com\/#\/b\/(\d+)\/(\d+)/,"http://www.mgtv.com/b/$1/$2.html")},
         url=function(a){return 0<a.indexOf(".iqiyi.com")?1:0<a.indexOf(".youku.com")?1:0<a.indexOf(".le.com")?1:0<a.indexOf(".sohu.com")?1:0<a.indexOf(".qq.com")?1:0<a.indexOf(".mgtv.com")?1:0};$(document).on("click","#button1",getUrl);$(document).ready(function(){window.localStorage&&localStorage.a&&($("#textfield1").val(localStorage.a),$("#button1").trigger("click"))});$("#textfield1").keydown(function(a){13===a.keyCode&&$("#button1").trigger("click")});
 </script>
